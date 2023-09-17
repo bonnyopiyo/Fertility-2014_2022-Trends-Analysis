@@ -99,6 +99,3 @@ table <- table |>
   )
 
 print(table)
-
-
-

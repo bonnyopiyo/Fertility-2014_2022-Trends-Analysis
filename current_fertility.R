@@ -1,6 +1,5 @@
 #fertility status of women usually taken(for the 3 years before the survey)
 current_fertility_2014_22 <- fread("C:/KDHS/data/current_fertility.csv")
-colnames(current_fertility_2014_22)
 
 df <- current_fertility_2014_22 %>% 
   setnames(c("Age group","2014_Urban", "2014_Rural" ,"2022_Urban" ,"2022_Rural"))|> 
