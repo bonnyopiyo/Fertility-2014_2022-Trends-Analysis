@@ -1,3 +1,4 @@
+#fertility status of women usually taken(for the 3 years before the survey)
 current_fertility_2014_22 <- fread("C:/KDHS/data/current_fertility.csv")
 colnames(current_fertility_2014_22)
 
@@ -8,7 +9,6 @@ df <- current_fertility_2014_22 %>%
          Change_Rural = list(c(`2014_Rural`,`2022_Rural`))) %>% 
   select(`Age group`,`2014_Urban`,`2022_Urban`,Change_Urban,
          `2014_Rural`,`2022_Rural`, Change_Rural)
-
 
 s <- "black"
 fv <- "black"
@@ -25,7 +25,7 @@ table <- df |>
   gt_plt_sparkline(Change_Rural, label = F, fig_dim = c(4, 8), palette = c_p) %>% 
   tab_header(
     title = "Fertility Trends (2014 vs. 2022)",
-    subtitle = "Comparison of Urban and Rural Trends by Age Group"
+    subtitle = "Comparison of Urban and Rural Residence Trends by Age Group"
   ) |> 
   tab_spanner(
     label = "Urban",
